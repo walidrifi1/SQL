@@ -1,0 +1,73 @@
+- Ver solo titulo y año
+
+	SELECT `ID`, `Titulo película`, `Año` FROM `peliculas` WHERE 1;
+
+
+
+
+- Todas las películas producidas a partir de cierto año, en orden ascendente o descendente
+
+	SELECT * FROM `peliculas` WHERE Año > 2020 
+	ORDER BY Año DESC;
+	
+
+
+
+
+- Ordenar por titulo
+
+	SELECT * FROM `peliculas` WHERE 1 ORDER BY `Titulo película`;
+
+
+
+
+
+- Agrupar por género
+
+	SELECT * FROM `peliculas` WHERE 1 GROUP BY `género`;
+	SELECT `género`, COUNT(*) FROM `peliculas` GROUP BY `género`;
+
+
+
+
+
+- Ver solo las pelis con recaudación menor que X
+
+	SELECT * FROM `peliculas` WHERE Recaudación < 30000000;
+
+
+
+
+
+- Ver películas entre un año y otro de producción
+
+	SELECT * FROM `peliculas` WHERE Año> 2015 AND Año <2024;
+
+
+
+
+
+- Ver cuantas pelis hay en la lista
+
+	SELECT COUNT(*) AS TotalPeliculas FROM `peliculas`;
+
+
+
+
+
+
+- Ver la suma de todas las recaudaciones		
+	
+	SELECT SUM(Recaudación) AS TotalRecaudado from `peliculas`;
+
+
+
+
+
+- Ver la media de las recaudaciones
+
+	SELECT AVG(Recaudación) AS media_Recaudaciones FROM `peliculas`;
+
+
+
+
